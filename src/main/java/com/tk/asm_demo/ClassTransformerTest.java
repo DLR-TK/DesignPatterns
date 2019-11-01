@@ -14,8 +14,11 @@ import static jdk.internal.org.objectweb.asm.Opcodes.INVOKESTATIC;
 
 public class ClassTransformerTest {
     public static void main(String[] args) throws Exception{
+        /**
+         * 使用该类的ClassLoader
+         */
         ClassReader classReader = new ClassReader(
-                ClassPrinter.class.getClassLoader().getResourceAsStream("com/tk/asm_demo/Tank.class"));
+                ClassTransformerTest.class.getClassLoader().getResourceAsStream("com/tk/asm_demo/Tank.class"));
 
         ClassWriter classWriter = new ClassWriter(0);
         ClassVisitor classVisitor = new ClassVisitor(ASM4, classWriter) {
@@ -62,15 +65,15 @@ public class ClassTransformerTest {
         classReader.accept(classVisitor, 0);
         byte[] b2 = classWriter.toByteArray();
 
-        MyClassLoader cl = new MyClassLoader();
-        cl.loadClass("com.tk.asm_demo.TimeProxy");
-        Class c2 = cl.defineClass("com.tk.asm_demo.Tank", b2);
+        MyClassLoader myClassLoader = new MyClassLoader();
+//        myClassLoader.loadClass("com.tk.asm_demo.TimeProxy");
+        Class c2 = myClassLoader.defineClass("com.tk.asm_demo.Tank", b2);
         /**
          * 获取move方法并运行
          */
         Object obj = c2.getConstructor().newInstance();
         Method method = c2.getMethod("move");
-        Object result = method.invoke(obj);
+        method.invoke(obj);
 
         String path = (String) System.getProperties().get("user.dir");
         File file = new File(path + "/com/tk/asm_demo/");
