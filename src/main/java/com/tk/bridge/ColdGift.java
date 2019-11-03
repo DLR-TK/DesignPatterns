@@ -1,4 +1,4 @@
-package com.tk.Bridge;
+package com.tk.bridge;
 
 
 public class ColdGift extends Gift {
