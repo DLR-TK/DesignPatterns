@@ -1,6 +1,6 @@
-package com.tk.observer.demo_01;
+package com.tk.observer.demo01;
 
-import com.tk.observer.demo_01.object.Child;
+import com.tk.observer.demo01.object.Child;
 
 public class Main {
     public static void main(String[] args) {

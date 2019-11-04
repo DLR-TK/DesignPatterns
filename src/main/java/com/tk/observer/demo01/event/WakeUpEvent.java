@@ -1,6 +1,6 @@
-package com.tk.observer.demo_01.event;
+package com.tk.observer.demo01.event;
 
-import com.tk.observer.demo_01.object.Child;
+import com.tk.observer.demo01.object.Child;
 import lombok.Data;
 
 @Data

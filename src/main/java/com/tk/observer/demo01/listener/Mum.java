@@ -1,6 +1,6 @@
-package com.tk.observer.demo_01.listener;
+package com.tk.observer.demo01.listener;
 
-import com.tk.observer.demo_01.event.WakeUpEvent;
+import com.tk.observer.demo01.event.WakeUpEvent;
 
 public class Mum implements Observer {
     public void hug() {

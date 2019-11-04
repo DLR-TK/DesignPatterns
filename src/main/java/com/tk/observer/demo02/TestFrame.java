@@ -1,4 +1,4 @@
-package com.tk.observer.demo_02;
+package com.tk.observer.demo02;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

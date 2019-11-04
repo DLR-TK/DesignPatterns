@@ -1,10 +1,10 @@
-package com.tk.observer.demo_01.object;
+package com.tk.observer.demo01.object;
 
-import com.tk.observer.demo_01.event.WakeUpEvent;
-import com.tk.observer.demo_01.listener.Dad;
-import com.tk.observer.demo_01.listener.Dog;
-import com.tk.observer.demo_01.listener.Mum;
-import com.tk.observer.demo_01.listener.Observer;
+import com.tk.observer.demo01.event.WakeUpEvent;
+import com.tk.observer.demo01.listener.Dad;
+import com.tk.observer.demo01.listener.Dog;
+import com.tk.observer.demo01.listener.Mum;
+import com.tk.observer.demo01.listener.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
